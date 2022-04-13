@@ -1,5 +1,9 @@
+name: Shell Commands
+
+on: [push]
+
 jobs:
-  run-shell-command:
+  run-shell-command: 
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -8,8 +12,3 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: python command
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
